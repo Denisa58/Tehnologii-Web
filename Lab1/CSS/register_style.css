@@ -1,0 +1,150 @@
+html, body {
+  background: linear-gradient(180deg, #2d3741, #1c2630);
+  color: #e8edf2;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/* style.css pune body pe 100vh și îl centrează; aici avem formular lung,
+   deci lăsăm pagina să crească în înălțime */
+body {
+  display: block;
+  height: auto;
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.card {
+  max-width: 600px;
+  width: 100%;
+  background: #3a4654;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  text-align: center;
+  color: #ffc83d;
+  margin-bottom: 24px;
+}
+
+.row {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.row label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #55657a;
+  background: #2d3741;
+  color: #e8edf2;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ffc83d;
+  box-shadow: 0 0 0 2px rgba(255, 200, 61, 0.3);
+}
+
+.two-col {
+  display: flex;
+  gap: 12px;
+}
+
+.two-col > div {
+  flex: 1;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-group label,
+.checkbox-grid label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* checkbox/radio nu trebuie să fie 100% lățime */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+.checkbox-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn.primary {
+  background: #ffc83d;
+  color: #2d3741;
+}
+
+.btn.primary:hover {
+  background: #ffd96b;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #e8edf2;
+  border: 1px solid #55657a;
+}
+
+.btn.ghost:hover {
+  background: #4a5868;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #ffc83d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
