@@ -1,12 +1,11 @@
 html, body {
-  background: linear-gradient(180deg, #2d3741, #1c2630);
-  color: #e8edf2;
-  margin-top: 40px;
-  margin-bottom: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #222;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-/* style.css pune body pe 100vh și îl centrează; aici avem formular lung,
-   deci lăsăm pagina să crească în înălțime */
+
 body {
   display: block;
   height: auto;
@@ -17,22 +16,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 10px;
+  padding: 40px 10px 60px;
 }
+
 
 .card {
   max-width: 600px;
   width: 100%;
-  background: #3a4654;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 h1 {
+  margin: 0;
+  padding: 20px 30px;
   text-align: center;
-  color: #ffc83d;
-  margin-bottom: 24px;
+  font-size: 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4a6cf7, #6a4cf7);
+}
+
+.register-form {
+  padding: 30px;
+  background-color: #f4f6fb;
 }
 
 .row {
@@ -43,24 +51,39 @@ h1 {
 .row label {
   display: block;
   margin-bottom: 6px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3b4cc0;
 }
+
 
 input, select, textarea {
   width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #55657a;
-  background: #2d3741;
-  color: #e8edf2;
-  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 24px;
+  border: 1px solid #d5d9e8;
+  background: #ffffff;
+  color: #222;
+  font-size: 15px;
+  font-family: inherit;
   box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+  border-radius: 16px;
+  resize: vertical;
 }
 
 input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: #ffc83d;
-  box-shadow: 0 0 0 2px rgba(255, 200, 61, 0.3);
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa1b9;
 }
 
 .two-col {
@@ -74,22 +97,8 @@ input:focus, select:focus, textarea:focus {
 
 .radio-group {
   display: flex;
-  gap: 20px;
-}
-
-.radio-group label,
-.checkbox-grid label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: normal;
-  margin-bottom: 0;
-}
-
-/* checkbox/radio nu trebuie să fie 100% lățime */
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .checkbox-grid {
@@ -98,53 +107,101 @@ input[type="checkbox"] {
   flex-wrap: wrap;
 }
 
+.radio-group label,
+.checkbox-grid label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  background-color: #eef1ff;
+  color: #3b4cc0;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.radio-group label:hover,
+.checkbox-grid label:hover {
+  background-color: #dde3ff;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  accent-color: #4a6cf7;
+}
+
+
+input[type="file"] {
+  border-radius: 16px;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
 .actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  gap: 10px;
+  margin-top: 24px;
 }
 
 .btn {
-  padding: 10px 22px;
-  border-radius: 6px;
+  padding: 12px 26px;
+  border-radius: 24px;
   border: none;
   font-size: 15px;
-  font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: transform 0.1s, opacity 0.2s, background 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.96);
 }
 
 .btn.primary {
-  background: #ffc83d;
-  color: #2d3741;
+  background: linear-gradient(135deg, #4a6cf7, #6a4cf7);
+  color: white;
 }
 
 .btn.primary:hover {
-  background: #ffd96b;
+  opacity: 0.9;
 }
 
 .btn.ghost {
   background: transparent;
-  color: #e8edf2;
-  border: 1px solid #55657a;
+  color: #4a6cf7;
+  border: 1px solid #4a6cf7;
 }
 
 .btn.ghost:hover {
-  background: #4a5868;
+  background: #eef1ff;
 }
+
 
 .login-link {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
+  color: #555;
 }
 
 .login-link a {
-  color: #ffc83d;
+  color: #4a6cf7;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .login-link a:hover {
   text-decoration: underline;
+}
+
+
+@media (max-width: 520px) {
+  .two-col {
+    flex-direction: column;
+  }
 }
