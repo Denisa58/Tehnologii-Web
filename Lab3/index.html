@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laborator 3 - CSS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav aria-label="Navigare principală">
+      <span class="brand">Web Tech Lab</span>
+      <ul class="nav-links">
+        <li><a href="#pas1">Selectori</a></li>
+        <li><a href="#pas2">Box Model</a></li>
+        <li><a href="#pas4">Galerie</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Laborator 3 - CSS</h1>
+
+    <section id="pas1">
+      <h2>Pasul 1. Selectori și declarații</h2>
+      <p class="important">An important paragraph</p>
+      <p>Câștigă a doua regulă (albastru).</p>
+    </section>
+
+    <section id="pas2">
+      <h2>Pasul 2. Box Model</h2>
+      <div class="card-a">Card A (content-box)</div>
+      <div class="card-b">Card B (border-box)</div>
+      <p>Card A: 300 + 2*20 + 2*5 = <strong>350px</strong>. Card B: <strong>300px</strong>.</p>
+    </section>
+
+    <section id="pas4">
+      <h2>Pasul 4. Galerie Grid</h2>
+      <div class="gallery">
+        <article class="gallery-card"><h3>Card 1</h3><p>Descriere</p></article>
+        <article class="gallery-card"><h3>Card 2</h3><p>Descriere</p></article>
+        <article class="gallery-card"><h3>Card 3</h3><p>Descriere</p></article>
+        <article class="gallery-card"><h3>Card 4</h3><p>Descriere</p></article>
+        <article class="gallery-card"><h3>Card 5</h3><p>Descriere</p></article>
+        <article class="gallery-card"><h3>Card 6</h3><p>Descriere</p></article>
+      </div>
+    </section>
+
+    <section id="pas5">
+      <h2>Pasul 5. Sidebar + conținut</h2>
+      <div class="layout">
+        <aside class="sidebar">
+          <h3>Sidebar</h3>
+          <p>Linkuri sau informații secundare.</p>
+        </aside>
+        <div class="content">
+          <h3>Conținut principal</h3>
+          <p>Pe ecrane inguste cele două zone apar una suub alta; pe ecrane mari apar in doua coloane.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
