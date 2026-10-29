@@ -1,0 +1,222 @@
+:root {
+  --bg: #070b1a;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --ink: #f1f5f9;
+  --text: #aab4c8;
+  --cyan: #22d3ee;
+  --violet: #8b5cf6;
+  --pink: #ec4899;
+  --grad: linear-gradient(135deg, #22d3ee 0%, #8b5cf6 55%, #ec4899 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(34, 211, 238, 0.18), transparent 38%),
+    radial-gradient(circle at 88% 20%, rgba(139, 92, 246, 0.22), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(236, 72, 153, 0.14), transparent 45%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.top-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 7px 18px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.top-nav a:hover {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.45);
+}
+
+body > div {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+body > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad);
+}
+
+h1 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+label {
+  margin-right: 8px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+input {
+  padding: 0.6rem 1rem;
+  width: min(100%, 320px);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+input::placeholder {
+  color: #8a94ad;
+}
+
+input:focus {
+  border-color: var(--cyan);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.25), 0 0 20px rgba(34, 211, 238, 0.25);
+}
+
+button {
+  margin-left: 8px;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--grad);
+  background-size: 160% 100%;
+  background-position: 0 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  transition: background-position 0.4s, transform 0.15s, box-shadow 0.2s;
+}
+
+button:hover {
+  background-position: 100% 0;
+  box-shadow: 0 8px 28px rgba(236, 72, 153, 0.5);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.status {
+  margin: 16px 0 8px;
+  color: var(--text);
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+table {
+  width: 100%;
+  margin-top: 8px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+td {
+  color: var(--text);
+  font-size: 14px;
+}
+
+tbody tr {
+  transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+  background: rgba(139, 92, 246, 0.14);
+}
+
+td a {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+td a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  body > div {
+    padding: 18px;
+    overflow-x: auto;
+  }
+
+  button {
+    margin: 10px 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
